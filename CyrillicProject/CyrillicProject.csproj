@@ -204,6 +204,14 @@
     <Compile Include="Migrations\202004191737132_Change2.Designer.cs">
       <DependentUpon>202004191737132_Change2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202004211543503_Change3.cs" />
+    <Compile Include="Migrations\202004211543503_Change3.Designer.cs">
+      <DependentUpon>202004211543503_Change3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004211550518_Change4.cs" />
+    <Compile Include="Migrations\202004211550518_Change4.Designer.cs">
+      <DependentUpon>202004211550518_Change4.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\APICall.cs" />
@@ -223,6 +231,7 @@
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Properties\PublishProfiles\CyrillicProject20200420040840 - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\cyrillicproject20200420040840-cyrillicproject-dev - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -245,15 +254,12 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\APICalls\Query.cshtml" />
-    <Content Include="Views\APICalls\Response.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -280,6 +286,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202004191737132_Change2.resx">
       <DependentUpon>202004191737132_Change2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004211543503_Change3.resx">
+      <DependentUpon>202004211543503_Change3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004211550518_Change4.resx">
+      <DependentUpon>202004211550518_Change4.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

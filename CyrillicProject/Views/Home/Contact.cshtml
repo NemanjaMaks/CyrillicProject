@@ -1,17 +1,60 @@
 ﻿@{
-    ViewBag.Title = "Contact";
+	ViewBag.Title = "Contact";
+	Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
+<style>
+	.mainDiv {
+		text-align: center;
+	}
 
-<address>
-    One Microsoft Way<br />
-    Redmond, WA 98052-6399<br />
-    <abbr title="Phone">P:</abbr>
-    425.555.0100
-</address>
+	.btn-linkedin {
+		background: #0E76A8;
+		border-radius: 0;
+		color: #fff;
+		border-width: 1px;
+		border-style: solid;
+		border-color: #084461;
+	}
 
-<address>
-    <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-</address>
+		.btn-linkedin:link, .btn-linkedin:visited {
+			color: #fff;
+		}
+
+		.btn-linkedin:active, .btn-linkedin:hover {
+			background: #084461;
+			color: #fff;
+		}
+
+	.contact_div {
+		padding-top: 20%;
+	}
+
+	.box_div {
+		position: center;
+		border: 1px solid black;
+		background-color: lightgray;
+	}
+</style>
+
+<div class="mainDiv">
+	<div class="contact_div">
+		<br />
+		<div class="box_div">
+			<br />
+			<h2>Contact</h2>
+			<address>
+				Nemanja Maksimovic<br />
+				Djackog Bataljona 8/7<br />
+				11500 Obrenovac<br />
+				<abbr title="Phone">Phone:</abbr>
+				069/780084
+			</address>
+
+			<address>
+				<strong>Mail: </strong><a href="mailto:maksimovic.nemanja.997@gmail.com">maksimovic.nemanja.997@gmail.com</a><br />
+				<a href="https://www.linkedin.com/in/nemanja-maksimovic-6b77a41a2" title="LinkedIn" class="btn btn-linkedin btn-lg"><i class="fa fa-linkedin fa-fw"></i> LinkedIn</a>
+			</address>
+			<br />
+		</div>
+	</div>
+</div>

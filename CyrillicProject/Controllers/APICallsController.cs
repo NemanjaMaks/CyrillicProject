@@ -27,21 +27,30 @@ namespace CyrillicProject.Controllers
         }
 
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Query(APICall query)
+        public async Task<String> Query(String query)
         {
-            if (!ModelState.IsValid)
+            if (query.Equals(""))
             {
-                return View();
+                return "Insert a API request query!";
             }
 
-            HttpResponseMessage response = await client.GetAsync(query.Request);
+            HttpResponseMessage response = await client.GetAsync(query);
             if (response.IsSuccessStatusCode)
             {
+                APICall call = new APICall();
+                call.Request = query;
+                call.Date = System.DateTime.Now;
+                call.Username = User.Identity.GetUserName();
+                db.APICalls.Add(call);
+                db.SaveChanges();
                 String resp = await response.Content.ReadAsStringAsync();
-                return Content(resp,"text/json");
+                return resp;
             }
-            return View();
+            else
+            {
+                return "Error: Bad request!";
+            }
+
         }
     }
 }

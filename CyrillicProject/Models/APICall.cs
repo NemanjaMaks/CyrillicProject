@@ -9,5 +9,7 @@ namespace CyrillicProject.Models
     {
         public int ID { get; set; }
         public String Request { get; set; }
+        public DateTime Date { get; set; }
+        public String Username { get; set; }
     }
 }
