@@ -29,11 +29,6 @@ namespace CyrillicProject.Controllers
         [HttpPost]
         public async Task<String> Query(String query)
         {
-            if (query.Equals(""))
-            {
-                return "Insert a API request query!";
-            }
-
             HttpResponseMessage response = await client.GetAsync(query);
             if (response.IsSuccessStatusCode)
             {

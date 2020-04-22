@@ -9,9 +9,8 @@
 	<h2>Query</h2>
 
 	<h4>Restfull query</h4>
-	<input type="text" id="query" placeholder="Insert request" />
-	<button id="submit">Submit</button>
-
+		<input type="text" id="query" placeholder="Insert request"/>
+		<button id="submit">Submit</button>
 	<div id="resultDiv">
 		<!-- This is where the response will be displayed -->
 	</div>
@@ -26,19 +25,23 @@ else
 <script>
 	$(document).ready(function () {
 		$("#submit").click(function () {
-			$.ajax({
-				type: "POST",
-				url: "/APICalls/Query",
-				contentType: "application/json; charset=utf-8",
-				data: '{"query":"' + $("#query").val() + '"}',
-				dataType: "html",
-				success: function (result, status, xhr) {
-					$("#resultDiv").html(result);
-				},
-				error: function (xhr, status, error) {
-					$("#resultDiv").html("ERROR " + error);
-				}
-			});
+			if ($("#query").val() !== "") {
+				$.ajax({
+					type: "POST",
+					url: "/APICalls/Query",
+					contentType: "application/json; charset=utf-8",
+					data: '{"query":"' + $("#query").val() + '"}',
+					dataType: "html",
+					success: function (result, status, xhr) {
+						$("#resultDiv").html(result);
+					},
+					error: function (xhr, status, error) {
+						$("#resultDiv").html("ERROR " + error);
+					}
+				});
+			} else {
+				alert("Request field must not be empty!")
+			}
 		});
 	});
 </script>
